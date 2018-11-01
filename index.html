@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/sweetalert2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400,500" rel="stylesheet">
+    <title>MisfortuneList</title>
+  </head>
+  <body>
+
+    <div class="container-fluid"> <!-- todo -->
+      <div class="row profile-bar"> <!-- fila de perfil -->
+          <div class="col-auto">
+              <i class="fab fa-facebook-square"></i>
+              <i class="fas fa-running"></i>
+              <i class="fab fa-instagram"></i>
+          </div>
+          <div class="col">
+              <div class="row justify-content-center">
+                <h1 class="col-auto titulo"><span>NotWunderList</span></h1>
+              </div>
+          </div>
+          <div class="col-auto icono">
+            <h4 class="float-right">Fabian Lamas</h4>
+            <img class="float-right" src="img/icono.png" alt="icono usuario" style="height:50px; border-radius:50%">
+          </div>
+      </div>
+
+        <div class="row"> <!-- fila de tareas -->
+            <div class="col-12 col-sm-2 barra-lateral"> <!-- barra menus -->
+                <div class="logo">
+                    <img src="img/lista.png" style="height:35px; margin: 25px 0px 0px 23px; position:absolute;">
+                    <h2>Mis Listas</h2>
+                </div>
+                <nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
+                    <a class="btnTarea activo" href="#" id="hoyId"><i class="icon-ok" style="font-size:25px"></i><span> Hoy</span></a>
+                    <a class="btnTarea" href="#" id="pendienteId" ><i class="icon-ok" style="font-size:25px"></i><span> Pendientes</span></a>
+                    <a class="btnTarea" href="#" id="finalizadoId" ><i class="icon-ok" style="font-size:25px"></i><span> Finalizadas</span></a>
+                </nav>
+            </div>
+
+            <div class="col main"> <!-- barra principal tareas -->
+                <!-- <a class="col-8 offset-md-6 btnAgregarTarea" id="btnAgregarTarea" href="#"><i class="icon-doc-text"></i><span> Nueva Tarea</span></a> -->
+                <!-- <a class="col-8 offset-md-6 btnAgregarTarea" id="btnGuardarTarea" href="#"><i class="icon-doc-text"></i><span> Guardar Tarea</span></a>
+                <a class="col-8 offset-md-6 btnAgregarTarea" id="btnInsertarCosas" href="#"><i class="icon-doc-text"></i><span> Insort</span></a>
+                <a class="col-8 offset-md-6 btnAgregarTarea" id="btnCargarTarea" href="#"><i class="icon-doc-text"></i><span> Cargar Tarea</span></a> -->
+                <div class="coll-11">
+                    <h4 class="titulo-tareas">Mis Tareas - Lista <span>Hoy</span></h4>
+                    <a class="btnAgregarTarea" id="btnAgregarTarea" href="#"><i class="icon-plus"></i><span> Nueva Tarea</span></a>
+                </div>
+
+
+
+                <div class="columna row justify-content-center" style="margin-top:15px">
+
+                    <div class="col-11 hoy" id="tareasHoy">
+
+                    </div>
+
+                    <div class="col-11 pendientes" id="tareasPendientes" style="display:none">
+
+                    </div>
+
+                    <div class="col-11 finalizados" id="tareasFinalizadas" style="display:none">
+
+                    </div>
+                    <div class="col-4" style="display:none"><!-- barra editar -->
+                        <div class="editar">
+                            <div id="editar-contenido">
+                              <h2>Editar Tarea: </h2>
+                              <textarea class="form-control" style="height:300px" rows="3"></textarea>
+                              <button type="button" id="btnAceptar" class="btn btn-primary mt-4 ml-5 mr-2">Aceptar</button>
+                              <button type="button" id="btnBorrar" class="btn btn-danger mt-4 ml-5">Borrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/sweetalert2.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

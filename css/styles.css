@@ -1,0 +1,244 @@
+body{
+  background-color: #003300;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+/* -----   Barra principal    ------*/
+.icono img{
+  margin-top: 35px;
+  padding-left: 10px;
+  margin-right: 15px;
+}
+.icono h4{
+  color: white;
+  margin-top: 43px;
+  padding-right: 10px;
+}
+
+/* -----   Barra Lateral    ------*/
+.barra-lateral{
+  background-color: #003300;
+  color: white;
+  min-width: 300px;
+  max-height: 83vh;
+  padding: 0;
+}
+.barra-lateral a{
+  color: #ccFF99;
+}
+/* -----   Logo    ------*/
+.barra-lateral .logo{
+  background-color: #003300;
+  margin-bottom: 2px;
+}
+.barra-lateral .logo h2{
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  padding: 20px 0;
+  text-align: center;
+  font-weight: 300;
+  margin: 0;
+}
+.fab{
+  margin-top: 35px;
+  padding-right: 20px;
+  color: #669933;
+}
+/* -----   MENU    ------*/
+.barra-lateral .menu a{
+  display: block;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.barra-lateral .menu a:hover{
+  background-color: #ccff99;
+  text-decoration: none;
+  color: #003300;
+}
+.activo {
+  background-color: #ccff99;
+  color: #003300!important;
+  font-size: 24px!important;
+}
+.barra-lateral .menu a i{
+  margin-right: 20px;
+}
+/* -----   MAIN    ------*/
+
+.main{
+  /* background: rgba(179,220,237,1);
+  background: -moz-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 60%, rgba(188,224,238,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179,220,237,1)), color-stop(0%, rgba(41,184,229,1)), color-stop(60%, rgba(188,224,238,1)), color-stop(100%, rgba(188,224,238,1)));
+  background: -webkit-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 60%, rgba(188,224,238,1) 100%);
+  background: -o-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 60%, rgba(188,224,238,1) 100%);
+  background: -ms-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 60%, rgba(188,224,238,1) 100%);
+  background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 60%, rgba(188,224,238,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=0 ); */
+  background-color: white;
+  color: black;
+  min-height: 83.05vh;
+  padding: 0;
+}
+.btnAgregarTarea{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  color: #003300;
+  display: block;
+  padding-top: 18px;
+  margin: 0 0 0 70%;
+}
+.btnAgregarTarea:hover{
+  transform: scale(1.1);
+  text-decoration: none;
+  color: #003300;
+}
+#tareasHoy, #tareasPendientes ,#tareasFinalizadas{
+  margin: 15px 0 15px 0;
+  padding-left: 25px;
+  display: none;
+}
+#tareasHoy{
+  display: block;
+}
+
+.tarea{
+  margin: 10px 0;
+  color: black;
+  background-color: #ccff99;
+  height: 45px;
+  padding: 6px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.tarea input{
+  transform: scale(1.5);
+  margin-right: 10px;
+  vertical-align: middle;
+  border:1px solid #F00;
+}
+.btnEditar, .btnBorrado{
+  color: #003300;
+  float: right;
+  transform: scale(1.5);
+}
+.btnEditar:hover{
+  color: #0b3c0b;
+  transform: scale(1.6);
+}
+/* -----   EDITAR    ------*/
+.editar{
+  background-color: #f2f2f2;
+  margin-right: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #e1e1e1;
+  min-height: 75vh;
+}
+#editar-contenido{
+  display: none;
+}
+/* -----   LOGIN    ------*/
+.formulario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 0 5% 10%;
+}
+.caja-login {
+    background-color: #F2F2F2;
+    border: 1px solid #707070;
+    max-width: 650px;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 300px;
+    -webkit-box-shadow: 0px 25px 35px -17px rgba(0,0,0,0.56);
+    -moz-box-shadow: 0px 25px 35px -17px rgba(0,0,0,0.56);
+    box-shadow: 0px 25px 35px -17px rgba(0,0,0,0.56);
+    padding: 3rem;
+}
+.campo {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.campo label {
+    flex: 0 0 90px;
+    text-align: right;
+    padding-right: 1rem;
+}
+.campo input[type="text"],
+.campo input[type="password"]{
+    height: 3rem;
+    border: 0;
+    flex: 1;
+    border: 1px solid #455A64;
+    border-radius: 5rem;
+    padding-left: 2rem;
+}
+.enviar {
+   justify-content: flex-end;
+}
+.boton {
+    background-color: #00063b;
+    color: white;
+    text-align: center;
+    transition: background-color .5s ease-in-out;
+    display: block;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    border: none;
+    font-weight: 900;
+}
+.boton:hover {
+    cursor: pointer;
+    background-color: rgb(0, 6, 59, .85)!important;
+}
+.campo a {
+    color: black;
+    text-decoration: none;
+}
+.btnTarea{
+  font-size: 20px;
+}
+.titulo-tareas{
+  float:left;
+  position:relative;
+  font-size:35px;
+  margin: 20px 0px 0px 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.fab{
+  font-size: 50px;
+}
+.profile-bar{
+  background-color: #669933;
+}
+.titulo{
+  font-size: 100px;
+  color: #66cc66;
+  text-shadow: -2px 0 #336600, 0 2px #336600, 2px 0 #336600, 0 -2px #336600;
+}
+.fa-running{
+  -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+   color: #003300;
+   font-size: 50px;
+}
