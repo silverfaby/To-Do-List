@@ -1,4 +1,3 @@
-var sendButton = document.getElementById('sendButton');
 var tareasHoy = document.getElementById('tareasHoy');
 var tareaPendiente = document.getElementById('tareasPendientes');
 var tareaFinalizada = document.getElementById('tareasFinalizadas');
