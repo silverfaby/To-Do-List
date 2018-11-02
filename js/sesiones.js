@@ -54,7 +54,7 @@ $("#btnLogin").click(function(){
     if(listaUsuarios[i].nombreDeUsuario == usuario && listaUsuarios[i].password == password){
       listaUsuarios[i].activo = true;
       localStorage.setItem('listaUsuarios', JSON.stringify(listaUsuarios));
-      window.location.href = "file:///Users/fabianlamas/Documents/Acamica/TodoList/index.html";
+      window.location.href = "file:///Users/fabianlamas/Documents/Acamica/To-Do-List/index.html";
       return;
     }
   }

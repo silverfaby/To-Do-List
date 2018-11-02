@@ -1,15 +1,16 @@
-var tareasHoy = document.getElementById('tareasHoy');
-var tareaPendiente = document.getElementById('tareasPendientes');
-var tareaFinalizada = document.getElementById('tareasFinalizadas');
+var tareasHoy = $('#tareasHoy')[0];//$('#tareasHoy').attr("id");
+var tareaPendiente = $('#tareasPendientes')[0];
+var tareaFinalizada = $('#tareasFinalizadas')[0];
 var miTareaParaEditar;
 var userID;
 
 function agregarTarea(){
-  var tareaText = document.getElementById('tareaText');
-  var tipoTarea = document.getElementById('tipoTarea');
+  var tareaText = $('#tareaText');
+  var tipoTarea = $('#tipoTarea');
 
   if(tipoTarea.value == "hoy"){
-      var nuevaTarea = document.createElement('div');
+    //  var nuevaTarea = document.createElement('div');
+      var nuevaTarea = $('<div></div>')
       nuevaTarea.className = 'tareaHoy tarea';
       tareasHoy.appendChild(nuevaTarea);
 
@@ -55,7 +56,6 @@ function agregarTarea(){
 $("body").on("click", ".check", function (e){      //funcion para pasar a finalizados
   $(this).siblings("span").css("text-decoration", "line-through");
   $(this).siblings("span")[0].className = "spanFin";
-//  console.log($(this).siblings("span")[0].className);
   $(this).siblings("i")[0].className = "icon-cog-alt btnBorrado";
   var obj = $(this).closest("div");
   $(this).remove();
@@ -64,7 +64,7 @@ $("body").on("click", ".check", function (e){      //funcion para pasar a finali
   guardarDatosUsuario();
 });
 
-$(".btnTarea").click(function(e){     //muestra su correspondiente seccion hoy, pendientes, etc AREGLAR
+$(".btnTarea").click(function(e){
 
   $("#hoyId").removeClass("activo");
   $("#pendienteId").removeClass("activo");
@@ -76,7 +76,7 @@ $(".btnTarea").click(function(e){     //muestra su correspondiente seccion hoy, 
   $("#tareasFinalizadas").hide();
 
   var myId = $(e.target).parent().attr('id');
-  if(myId == undefined)myId = e.target.id;
+  if(!myId)myId = e.target.id;
 
   switch (myId) {
     case "hoyId":
@@ -92,8 +92,6 @@ $(".btnTarea").click(function(e){     //muestra su correspondiente seccion hoy, 
         $("#finalizadoId").addClass("activo");
       break;
   }
-
-
 });
 
 $("#btnAgregarTarea").click(function(){
@@ -111,14 +109,9 @@ $("#btnAgregarTarea").click(function(){
   })
 });
 
-$(".columna").on("click", ".btnEditar", function (e){  //esto hay que cambiar
-  // $(this).siblings("span").attr('contentEditable', true);
-  // $(this).siblings("span").focus();
-  // $(this).siblings("span").select();
-  // miTareaParaEditar = $(this).closest("div");
+$(".columna").on("click", ".btnEditar", function (e){
    var text = $(this).siblings("span").text();
-  // $(".form-control").val(text);
-  // $("#editar-contenido").show();
+
     swal({
     title: 'Editar: ',
     input: 'text',
@@ -163,33 +156,7 @@ $(".editar").on("click", "#btnAceptar", function (){
    guardarDatosUsuario();
 });
 
-// $(".editar").on("click", "#btnBorrar", function (){
-//     swal({
-//     title: 'Esta seguro que desea borrar?',
-//     text: "Lo eliminara para siempre!",
-//     type: 'warning',
-//     showCancelButton: true,
-//     confirmButtonColor: '#3085d6',
-//     cancelButtonColor: '#d33',
-//     confirmButtonText: 'Si, Borrar!'
-//   }).then((result) => {
-//     if (result.value) {
-//
-//       swal(
-//         'Borrado!',
-//         'La tarea se a eliminado.',
-//         'success'
-//       )
-//     }
-//   })
-// });
-
 function borradoYrecet(obj){
-  //$(".form-control").val("");
-  //$("#editar-contenido").hide();
-  // miTareaParaEditar.remove();
-  // miTareaParaEditar = "";
-
   $(obj).remove();
   guardarDatosUsuario();
 }
@@ -206,13 +173,11 @@ function setUser(){
     }
   }
 
-  var fileName = location.pathname.split("/").slice(-1)
+  var fileName = location.pathname.split("/").slice(-1);
   if(fileName == "index.html"){
     cargarDatosUsuario();
-    console.log("se ha cargao");
   }
 }
-setUser();
 
 function guardarDatosUsuario(){
   var spanHoyList = $(".spanHoy");
@@ -296,5 +261,7 @@ function cargarDatosUsuario(){
 }
 
 $(".fa-running").click("click", function(){
-  window.location.href = "file:///Users/fabianlamas/Documents/Acamica/TodoList/login.html";
+  window.location.href = "file:///Users/fabianlamas/Documents/Acamica/To-Do-List/login.html";
 });
+
+setUser();
